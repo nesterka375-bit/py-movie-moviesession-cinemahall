@@ -7,12 +7,12 @@ def get_cinema_halls() -> QuerySet:
 
 
 def create_cinema_hall(
-        cinemahall_name: str,
-        cinemahall_rows: int,
-        cinemahall_seat_in_row: int) -> CinemaHall:
+        hall_name: str,
+        hall_rows: int,
+        hall_seat_in_row: int) -> CinemaHall:
     cinema_hall = CinemaHall.objects.create(
-        name=cinemahall_name,
-        rows=cinemahall_rows,
-        seat_in_row=cinemahall_seat_in_row
+        name=hall_name,
+        rows=hall_rows,
+        seat_in_row=hall_seat_in_row
     )
     return cinema_hall
