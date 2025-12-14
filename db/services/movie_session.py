@@ -6,19 +6,19 @@ from db.models import MovieSession
 
 
 def create_movie_session(
-        show_time: datetime,
+        movie_show_time: datetime,
         movie_id: int,
         cinema_hall_id: int
 ) -> MovieSession:
     movie_session = MovieSession.objects.create(
-        movie_show_time=show_time,
+        show_time=movie_show_time,
         movie_id=movie_id,
         cinema_hall_id=cinema_hall_id
     )
     return movie_session
 
 
-def get_movies_sessions(session_date: datetime = None) -> QuerySet:
+def get_movies_sessions(session_date: str = None) -> QuerySet:
     movie_sessions = MovieSession.objects.all()
     if session_date is not None:
         movie_sessions = movie_sessions.filter(show_time__date=session_date)
