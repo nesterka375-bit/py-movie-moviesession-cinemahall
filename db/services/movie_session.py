@@ -8,9 +8,9 @@ def create_movie_session(
         cinemahall_id: MovieSession
 ) -> MovieSession:
     movie_session = MovieSession.objects.create(
-        movie_show_time=moviesession_show_time,
-        movie_id=movie_id,
-        cinema_hall_id=cinemahall_id
+        show_time=moviesession_show_time,
+        id=movie_id,
+        hall_id=cinemahall_id
     )
     return movie_session
 

@@ -11,8 +11,8 @@ def create_cinema_hall(
         cinemahall_rows: CinemaHall,
         cinemahall_seat_in_row: CinemaHall) -> QuerySet:
     cinema_hall = CinemaHall.objects.filter(
-        hall_name=cinemahall_name,
-        hall_rows=cinemahall_rows,
-        hall_seat_in_row=cinemahall_seat_in_row
+        name=cinemahall_name,
+        rows=cinemahall_rows,
+        seat_in_row=cinemahall_seat_in_row
     )
     return cinema_hall
