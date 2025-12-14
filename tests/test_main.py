@@ -5,8 +5,8 @@ from contextlib import redirect_stdout
 from io import StringIO
 
 from db.models import Actor, Genre, Movie, MovieSession, CinemaHall
-from db.services import get_movies, get_movie_by_id, create_movie
-from db.services import get_cinema_halls, create_cinema_hall
+from db.services.movie import get_movies, get_movie_by_id, create_movie
+from db.services.cinema_hall import get_cinema_halls, create_cinema_hall
 from db.services import (
     create_movie_session,
     get_movies_sessions,
